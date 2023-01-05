@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_marginBottom="2dp"
+    android:background="@color/color_background_secondary">
+
+    <ImageView
+        android:id="@+id/anime_image"
+        android:layout_width="116dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/anime_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/img_1"/>
+
+    <TextView
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/anime_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fontFamily="@font/biryani"
+        android:textSize="18sp"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/anime_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/anime_synopsis"
+        tools:text="@string/anime_name" />
+
+    <TextView
+        android:id="@+id/anime_synopsis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/biryani"
+        android:gravity="start"
+        android:maxLines="3"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/anime_image"
+        app:layout_constraintTop_toBottomOf="@id/anime_name"
+        tools:text="@string/lorem_ipsum"
+        app:layout_constraintBottom_toTopOf="@id/image_view_trending"/>
+
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="@id/anime_image"
+        android:id="@+id/image_view_trending"
+        android:layout_width="20dp"
+        app:chainUseRtl="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_height="20dp"
+        android:contentDescription="@string/trending_emote"
+        android:src="@drawable/ic_baseline_trending_up_24"
+        app:layout_constraintEnd_toStartOf="@id/anime_rank"
+        app:layout_constraintStart_toEndOf="@id/anime_image"
+        app:layout_constraintTop_toBottomOf="@id/anime_synopsis" />
+
+    <TextView
+        android:id="@+id/anime_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/biryani"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_trending"
+        app:layout_constraintEnd_toStartOf="@id/image_view_type"
+        app:layout_constraintStart_toEndOf="@id/image_view_trending"
+        app:layout_constraintTop_toTopOf="@id/image_view_trending"
+        tools:text="2516" />
+
+    <ImageView
+        android:id="@+id/image_view_type"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="32dp"
+        android:contentDescription="@string/trending_emote"
+        android:src="@drawable/ic_baseline_tv_24"
+        app:layout_constraintBottom_toBottomOf="@id/anime_rank"
+        app:layout_constraintEnd_toStartOf="@id/anime_type"
+        app:layout_constraintStart_toEndOf="@id/anime_rank"
+        app:layout_constraintTop_toTopOf="@id/anime_rank" />
+
+    <TextView
+        android:id="@+id/anime_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/biryani"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/image_view_type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image_view_type"
+        app:layout_constraintTop_toTopOf="@id/image_view_type"
+        tools:text="Movie" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

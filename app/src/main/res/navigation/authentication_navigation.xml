@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/authentication_navigation"
+    app:startDestination="@id/mainAuthenticationFragment">
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.quero_anime_app.ui.view.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/signInFragmentToSignUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/signInFragmentToMainAuthenticationFragment"
+            app:destination="@id/mainAuthenticationFragment" />
+        <action
+            android:id="@+id/signInFragmentToForgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.quero_anime_app.ui.view.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/signUpFragmentToSignInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainAuthenticationFragment"
+        android:name="com.example.quero_anime_app.ui.view.MainAuthenticationFragment"
+        android:label="fragment_main_authentication"
+        tools:layout="@layout/fragment_main_authentication" >
+        <action
+            android:id="@+id/mainAuthenticationFragmentToSignInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/mainAuthenticationFragmentToSignUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.quero_anime_app.ui.view.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/forgotPasswordFragmentToSignInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+</navigation>

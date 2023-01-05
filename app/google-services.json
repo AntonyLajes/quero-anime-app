@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1018714872894",
+    "project_id": "quero-anime-app",
+    "storage_bucket": "quero-anime-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018714872894:android:82287a6b91e70fe4d2856f",
+        "android_client_info": {
+          "package_name": "com.example.quero_anime_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018714872894-mk0numnui0rdo514vtdv5dcrbetlrp64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quero_anime_app",
+            "certificate_hash": "42f60902c04ba1ace977ffb11eab898ee9cee99d"
+          }
+        },
+        {
+          "client_id": "1018714872894-94bkmoq2ijoo4halok90ofcdei44jkdj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFf-W7_FnXFJkgrzAnsbc6CWheSacVPz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018714872894-94bkmoq2ijoo4halok90ofcdei44jkdj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

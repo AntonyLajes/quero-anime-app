@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.quero_anime_app.ui.view.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/nav_home_to_nav_anime_home"
+            app:destination="@id/nav_anime_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_search"
+        android:name="com.example.quero_anime_app.ui.view.SearchFragment"
+        android:label="@string/search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/nav_search_to_nav_anime_home"
+            app:destination="@id/nav_anime_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.quero_anime_app.ui.view.FavoriteFragment"
+        android:label="@string/favorites"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/nav_favorites_to_nav_anime_home"
+            app:destination="@id/nav_anime_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.quero_anime_app.ui.view.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_anime_home"
+        android:name="com.example.quero_anime_app.ui.view.AnimeHomeFragment"
+        android:label="fragment_anime_home"
+        tools:layout="@layout/fragment_anime_home" >
+        <action
+            android:id="@+id/nav_anime_home_to_nav_home"
+            app:destination="@id/nav_home" />
+        <argument
+            android:name="animeData"
+            app:argType="com.example.quero_anime_app.util.models.AnimeDbModel" />
+    </fragment>
+</navigation>

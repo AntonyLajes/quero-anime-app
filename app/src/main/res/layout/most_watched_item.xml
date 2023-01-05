@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/anime_image"
+        android:layout_width="128dp"
+        android:layout_height="168dp"
+        android:contentDescription="@string/anime_image"
+        android:layout_margin="16dp"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:paddingTop="6dp"
+        android:id="@+id/anime_name"
+        android:layout_width="120dp"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintStart_toStartOf="@id/anime_image"
+        app:layout_constraintEnd_toEndOf="@id/anime_image"
+        app:layout_constraintTop_toBottomOf="@id/anime_image"
+        android:layout_height="wrap_content"
+        tools:text="Anime Name"
+        android:gravity="start"
+        android:fontFamily="@font/biryani"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
